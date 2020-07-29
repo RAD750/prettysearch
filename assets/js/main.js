@@ -54,6 +54,7 @@ function savePrefs() {
     //searchengine
     Object.entries(config_obj.search_engines).forEach(([key, value]) => {
         if (value.index == document.getElementById("pref.search_engine").selectedIndex) {
+           console.log(key);
            localStorage.setItem("search_engine", key);
         };
     });
@@ -122,8 +123,33 @@ function getBackdrop() {
     
 }
 
+function checkForShortCuts(){
+
+    document.addEventListener('keyup', (e) => {
+        if (e.shiftKey && e.keyCode == 71) {
+            document.getElementById('pref.search_engine').selectedIndex = 0;
+            savePrefs();
+        } else if (e.shiftKey && e.keyCode == 89) {
+            document.getElementById('pref.search_engine').selectedIndex = 2;
+            savePrefs();
+        } else if (e.shiftKey && e.keyCode == 66) {
+            document.getElementById('pref.search_engine').selectedIndex = 1;
+            savePrefs();
+        } else if (e.shiftKey && e.keyCode == 68) {
+            document.getElementById('pref.search_engine').selectedIndex = 3;
+            savePrefs();
+        } else if (e.shiftKey && e.keyCode == 81) {
+            document.getElementById('pref.search_engine').selectedIndex = 4;
+            savePrefs();
+        } else if (e.shiftKey && e.keyCode == 69) {
+            document.getElementById('pref.search_engine').selectedIndex = 6;
+            savePrefs();
+        }
+    }, false);
+}
 
 function on_page_load() {
+    checkForShortCuts();
     loadPrefs();
     getConfig();
     getBackdrop();
