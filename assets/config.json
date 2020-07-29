@@ -1,0 +1,39 @@
+{
+    "search_engines": {
+        "google": {
+            "friendlyName": "Google",
+            "endpointURL": "https://google.com/search?q=",
+            "index": 0
+        },
+        "bing": {
+            "friendlyName": "Bing",
+            "endpointURL": "https://bing.com/?q=",
+            "index": 1
+        },
+        "yahoo": {
+            "friendlyName": "Yahoo",
+            "endpointURL": "https://search.yahoo.com/search?q=",
+            "index": 2
+        },
+        "duckduckgo": {
+            "friendlyName": "DuckDuckGo",
+            "endpointURL": "https://duckduckgo.com/?q=",
+            "index": 3
+        },
+        "qwant": {
+            "friendlyName": "Quant",
+            "endpointURL": "https://qwant.com/?q=",
+            "index": 4
+        },
+        "qwantlite": {
+            "friendlyName": "Qwant Lite",
+            "endpointURL": "https://lite.qwant.com/?q=",
+            "index": 5
+        },
+        "ecosia": {
+            "friendlyName": "Ecosia",
+            "endpointURL": "https://www.ecosia.org/search?q=",
+            "index": 6
+        }
+    }
+}

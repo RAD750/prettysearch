@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PrettySearch</title>
+    <meta name="description"
+        content="Search the Web using your favourite search engine while enjoying Bing-like backdrops ;)">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- for users without javascript -->
+    <noscript>
+        <div class="w3-modal">
+            <div class="w3-modal-content w3-animate-opacity w3-card-4">
+                <header class="w3-container w3-white">
+                    <h2>Please Enable Javascript</h2>
+                </header>
+                <div class="w3-container">
+                    <p>This website is a single-page application, meaning it requires Javascript even for basic
+                        functionality. I am strongly against the useless proliferation and even abuse of Javascript in
+                        recent years, but still believe Javascript can be the right choice if used correctly.</p>
+                    <p>I strive to only use as little Javascript as humanly possible. If you are paranoid or just
+                        curious, feel free to <a href="/assets/js/main.js">take a look at the source</a> before enabling
+                        Javascript on this website, and also please do send complaints or suggestions on <a
+                            href="https://github.com/RAD750/prettysearch">my Github</a>.</p>
+                </div>
+            </div>
+        </div>
+    </noscript>
+
+    <style id="js-backdrop"></style>
+</head>
+
+
+
+
+
+<body onload="on_page_load()">
+    <!--top bar-->
+    <div class="w3-bar w3-text-white">
+        <div class="w3-bar-item w3-right" id="i18n.btnAbout"><a href="#/about" onclick='openMdl("mdl_about")'>About</a>
+        </div>
+        <div class="w3-bar-item w3-right" id="i18n.btnPreferences"><a href="#/preferences"
+                onclick='openMdl("mdl_preferences")'>Preferences</a></div>
+    </div>
+
+    <!--search container-->
+    <main class="w3-display-middle w3-text-white w3-text-shadow-medium">
+        <h1 class="w3-center">PrettySearch</h1>
+        <form class="search-form" id="search-form">
+            <input autofocus="" autocorrect="off" autocapitalize="off" id="search-input" class="search-input"
+                autocomplete="off" name="q" tabindex="1" value="" type="text">
+            <input type="submit" tabindex="2" value="&#128269;" id="search-submit" class="search-submit icon-search">
+        </form>
+    </main>
+    <!--modals-->
+    <!--about modal-->
+    <div id="mdl_about" class="w3-modal">
+        <div class="w3-modal-content w3-animate-opacity w3-card-4">
+            <header class="w3-container w3-white">
+                <span onclick="closeMdl('mdl_about')" class="w3-button w3-display-topright">&times;</span>
+                <h2 id="i18n.titleAboutModal">About PrettySearch</h2>
+            </header>
+            <div class="w3-container w3-padding">
+                <p id="i18n.textAboutModal">PrettySearch is a search engine portal.<br />Its purpose is to recreate the
+                    pretty interface of Bing, with the nice photos in the backdrop, without tying you to
+                    Microsoft.<br />You can choose your favourite search engine in the <a href="#/preferences"
+                        onclick='closeMdl("mdl_about");openMdl("mdl_preferences")'>preferences</a></p>
+                <p id="i18n.textAboutModalPrivacy">Please read the <a href="#/preferences"
+                    onclick='closeMdl("mdl_about");openMdl("mdl_privacy")'>Privacy Policy</a>. You'll be surprised &smile;</p>
+            </div>
+        </div>
+    </div>
+    <!--preferences modal-->
+    <div id="mdl_preferences" class="w3-modal">
+        <div class="w3-modal-content w3-animate-opacity w3-card-4">
+            <header class="w3-container w3-white">
+                <span onclick="closeMdl('mdl_preferences')" class="w3-button w3-display-topright ">&times;</span>
+                    <h2 id="i18n.titlePreferencesModal ">Search Preferences</h2>
+                    </header>
+                    <div class="w3-container w3-padding">
+                        <label id="i18n.labelSearchEngineSelection">Choose your search engine:</label>
+                        <select id="pref.search_engine" class="w3-input">
+                        </select>
+                        <br />
+                        <label id="i18n.labelUseCustomBackdrop">Use custom backdrop:</label>
+                        <input class="w3-input" type="text" placeholder="Input URL (e.g. https://www.example.com/backdrop.jpg)" id="pref.custom_backdrop" />
+                        <br />
+                        <button class="w3-button w3-teal" onclick='savePrefs()' id="i18n.buttonSavePrefs">Save preferences</button>
+                        <button class="w3-button w3-light-gray" onclick='resetPrefs()' id="i18n.buttonResetToDefault">Reset to default</button>
+                    </div>
+            </div>
+        </div>
+
+        <!--privacy modal-->
+        <div id="mdl_privacy" class="w3-modal">
+            <div class="w3-modal-content w3-animate-opacity w3-card-4">
+                <header class="w3-container w3-white">
+                    <span onclick="closeMdl('mdl_privacy')" class="w3-button w3-display-topright ">&times;</span>
+                    <h2 id="i18n.titlePrivacyModal">Privacy</h2>
+                </header>
+                <div id="i18n.textPrivacyModal" class="w3-container w3-padding">
+                    <h4>Data Protection Officer</h4>
+                    <p><a href="mailto:jacopo_NOSPAMPLEASE@a-centauri.com">Jacopo Cassinis</a> - Sori (Italy)</p>
+                    I do not collect any data and logs are anonymized. This website uses no cookies. Preferences are
+                    saved via HTML5 Web Storage and are never sent to any server.<br />When clicking "Search", you send
+                    your search query to the search engine of your choice, so you should read their privacy policy for
+                    further information.
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+        <script src="/assets/js/main.js " async defer></script>
+</body>
+
+</html>
