@@ -1,0 +1,22 @@
+{
+    "name": "PrettySearch",
+    "short_name": "PrettySearch",
+    "theme_color": "#f39c12",
+    "background_color": "#97a7bd",
+    "display": "browser",
+    "Scope": "/",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "/assets/media/icons/icons/PrettySearch.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/media/icons/icons/PrettySearch.256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      }
+    ],
+    "splash_pages": null
+  }
