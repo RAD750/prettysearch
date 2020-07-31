@@ -41,7 +41,7 @@ function loadPrefs() {
         }
         var custom_backdrop = localStorage.getItem("custom_backdrop");
         if (custom_backdrop != null) { //apply custom backdrop
-            document.getElementById("pref.custom_backdrop").innerHTML = custom_backdrop;
+            document.getElementById("pref.custom_backdrop").value = custom_backdrop;
         }
 
     } else {
