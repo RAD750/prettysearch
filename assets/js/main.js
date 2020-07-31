@@ -43,7 +43,7 @@ function loadPrefs() {
         if (custom_backdrop != null) { //apply custom backdrop
             document.getElementById("pref.custom_backdrop").innerHTML = custom_backdrop;
         }
-        
+
     } else {
         alert("Error! No WebStorage Support!")
     }
@@ -54,8 +54,7 @@ function savePrefs() {
     //searchengine
     Object.entries(config_obj.search_engines).forEach(([key, value]) => {
         if (value.index == document.getElementById("pref.search_engine").selectedIndex) {
-           console.log(key);
-           localStorage.setItem("search_engine", key);
+            localStorage.setItem("search_engine", key);
         };
     });
     localStorage.setItem("custom_backdrop", document.getElementById("pref.custom_backdrop").value);
@@ -72,7 +71,7 @@ function resetPrefs() {
     document.getElementById("pref.custom_backdrop").value = null;
     closeMdl("mdl_preferences");
     getBackdrop();
-    
+
 }
 
 function getConfig() {
@@ -86,13 +85,12 @@ function getConfig() {
         var option_str = null;
         Object.entries(config_obj.search_engines).forEach(([key, value]) => {
             option_str = option_str + `<option value="${key}">${value.friendlyName}</option>`;
+
         });
         document.getElementById("pref.search_engine").innerHTML = option_str;
         document.getElementById("pref.search_engine").selectedIndex = config_obj.search_engines[localStorage.getItem("search_engine")].index;
         var pref_search_engine = localStorage.getItem("search_engine");
-        console.log(pref_search_engine);
-        console.log(config_obj.search_engines[pref_search_engine].index)
-        document.getElementById("search-form").action = config_obj.search_engines[pref_search_engine].endpointURL;
+        document.getElementById("search-form").action = config_obj.search_engines[pref_search_engine].endpointURL;    
     }
 
 }
@@ -120,32 +118,42 @@ function getBackdrop() {
         var a = "body { background-image: url('" + localStorage.getItem("custom_backdrop") + "'); background-repeat: no-repeat; background-size: cover!important; }";
         document.getElementById("js-backdrop").innerHTML = a;
     }
-    
+
 }
 
-function checkForShortCuts(){
-
+function checkForShortCuts() {
     document.addEventListener('keyup', (e) => {
-        if (e.shiftKey && e.keyCode == 71) {
-            document.getElementById('pref.search_engine').selectedIndex = 0;
-            savePrefs();
-        } else if (e.shiftKey && e.keyCode == 89) {
-            document.getElementById('pref.search_engine').selectedIndex = 2;
-            savePrefs();
-        } else if (e.shiftKey && e.keyCode == 66) {
-            document.getElementById('pref.search_engine').selectedIndex = 1;
-            savePrefs();
-        } else if (e.shiftKey && e.keyCode == 68) {
-            document.getElementById('pref.search_engine').selectedIndex = 3;
-            savePrefs();
-        } else if (e.shiftKey && e.keyCode == 81) {
-            document.getElementById('pref.search_engine').selectedIndex = 4;
-            savePrefs();
-        } else if (e.shiftKey && e.keyCode == 69) {
-            document.getElementById('pref.search_engine').selectedIndex = 6;
-            savePrefs();
+        var searchInput = document.getElementById("search-input")
+        if (searchInput !== document.activeElement) {
+            if (e.shiftKey) {
+                for (i = 0; i < Object.keys(config_obj.search_engines).length; i++) {
+                    var search_engine = Object.keys(config_obj.search_engines);
+                    if (e.code == "Key" + config_obj.search_engines[search_engine[i]].keyShortcut) {
+                        document.getElementById('pref.search_engine').selectedIndex = config_obj.search_engines[search_engine[i]].index;
+                        savePrefs();
+                        break
+                    }
+                }
+            }
         }
     }, false);
+}
+
+function applyi18n() {
+            /*i18n*/
+            var locale = window.navigator.language.substring(0, 2);
+            var req_obj_i18n = new XMLHttpRequest();
+            req_obj_i18n.onload = reqListeneri18n;
+            req_obj_i18n.open("get", `/assets/i18n/${locale}.json`, true);
+            req_obj_i18n.send();
+            function reqListeneri18n(e) {
+                var i18n_obj;
+                i18n_obj = JSON.parse(this.responseText);
+                var option_str = null;
+                Object.entries(i18n_obj).forEach(([key, value]) => {
+                    document.getElementById(key).innerHTML = value;
+                });
+            }
 }
 
 function on_page_load() {
@@ -154,4 +162,5 @@ function on_page_load() {
     getConfig();
     getBackdrop();
     openMdlOnPageLoad();
+    applyi18n();
 }

@@ -38,10 +38,10 @@
 <body onload="on_page_load()">
     <!--top bar-->
     <div class="w3-bar w3-text-white">
-        <div class="w3-bar-item w3-right" id="i18n.btnAbout"><a href="#/about" onclick='openMdl("mdl_about")'>About</a>
+        <div class="w3-bar-item w3-right"><a href="#/about" onclick='openMdl("mdl_about")'  id="i18n_btnAbout">About</a>
         </div>
-        <div class="w3-bar-item w3-right" id="i18n.btnPreferences"><a href="#/preferences"
-                onclick='openMdl("mdl_preferences")'>Preferences</a></div>
+        <div class="w3-bar-item w3-right"><a href="#/preferences"
+                onclick='openMdl("mdl_preferences")' id="i18n_btnPreferences">Preferences</a></div>
     </div>
 
     <!--search container-->
@@ -50,7 +50,7 @@
         <form class="search-form" id="search-form">
             <input autofocus="" autocorrect="off" autocapitalize="off" id="search-input" class="search-input"
                 autocomplete="off" name="q" tabindex="1" value="" type="text">
-            <input type="submit" tabindex="2" value="&#128269;" id="search-submit" class="search-submit icon-search">
+            <input type="submit" tabindex="2" value="" id="search-submit" class="search-submit icon-search fa fa-car">
         </form>
     </main>
     <!--modals-->
@@ -59,15 +59,16 @@
         <div class="w3-modal-content w3-animate-opacity w3-card-4">
             <header class="w3-container w3-white">
                 <span onclick="closeMdl('mdl_about')" class="w3-button w3-display-topright">&times;</span>
-                <h2 id="i18n.titleAboutModal">About PrettySearch</h2>
+                <h2 id="i18n_titleAboutModal">About PrettySearch</h2>
             </header>
             <div class="w3-container w3-padding">
-                <p id="i18n.textAboutModal">PrettySearch is a search engine portal.<br />Its purpose is to recreate the
+                <p id="i18n_textAboutModal">PrettySearch is a search engine portal.<br />Its purpose is to recreate the
                     pretty interface of Bing, with the nice photos in the backdrop, without tying you to
-                    Microsoft.<br />You can choose your favourite search engine in the <a href="#/preferences"
-                        onclick='closeMdl("mdl_about");openMdl("mdl_preferences")'>preferences</a></p>
-                <p id="i18n.textAboutModalPrivacy">Please read the <a href="#/preferences"
-                    onclick='closeMdl("mdl_about");openMdl("mdl_privacy")'>Privacy Policy</a>. You'll be surprised &smile;</p>
+                    Microsoft.<br />You can choose your favourite search engine and your favourite backdrop photo in the <a href="#/preferences"
+                        onclick='closeMdl("mdl_about");openMdl("mdl_preferences")'>preferences</a>.</p>
+                <p id="i18n_textAboutModalDevel">This website is hosted and developed by <a href="https://www.a-centauri.com">Jacopo</a>. You can have a look at the source and contribute on <a href="https://github.com/RAD750/prettysearch">GitHub</a></p>
+                <p id="i18n_textAboutModalPrivacy">Please read the <a href="#/preferences"
+                    onclick='closeMdl("mdl_about");openMdl("mdl_privacy")'>Privacy Policy</a>. You'll be surprised ☺</p>
             </div>
         </div>
     </div>
@@ -76,18 +77,18 @@
         <div class="w3-modal-content w3-animate-opacity w3-card-4">
             <header class="w3-container w3-white">
                 <span onclick="closeMdl('mdl_preferences')" class="w3-button w3-display-topright ">&times;</span>
-                    <h2 id="i18n.titlePreferencesModal ">Search Preferences</h2>
+                    <h2 id="i18n_titlePreferencesModal">Search Preferences</h2>
                     </header>
                     <div class="w3-container w3-padding">
-                        <label id="i18n.labelSearchEngineSelection">Choose your search engine:</label>
+                        <label id="i18n_labelSearchEngineSelection">Choose your search engine:</label>
                         <select id="pref.search_engine" class="w3-input">
                         </select>
                         <br />
-                        <label id="i18n.labelUseCustomBackdrop">Use custom backdrop:</label>
-                        <input class="w3-input" type="text" placeholder="Input URL (e.g. https://www.example.com/backdrop.jpg)" id="pref.custom_backdrop" />
+                        <label id="i18n_labelUseCustomBackdrop">Use custom backdrop:</label>
+                        <input class="w3-input" type="text" placeholder="https://www.example.com/backdrop.jpg" id="pref.custom_backdrop" />
                         <br />
-                        <button class="w3-button w3-teal" onclick='savePrefs()' id="i18n.buttonSavePrefs">Save preferences</button>
-                        <button class="w3-button w3-light-gray" onclick='resetPrefs()' id="i18n.buttonResetToDefault">Reset to default</button>
+                        <button class="w3-button w3-teal" onclick='savePrefs()' id="i18n_btnSavePrefs">Save preferences</button>
+                        <button class="w3-button w3-light-gray" onclick='resetPrefs()' id="i18n_btnResetToDefault">Reset to default</button>
                     </div>
             </div>
         </div>
@@ -97,9 +98,9 @@
             <div class="w3-modal-content w3-animate-opacity w3-card-4">
                 <header class="w3-container w3-white">
                     <span onclick="closeMdl('mdl_privacy')" class="w3-button w3-display-topright ">&times;</span>
-                    <h2 id="i18n.titlePrivacyModal">Privacy</h2>
+                    <h2 id="i18n_titlePrivacyModal">Privacy</h2>
                 </header>
-                <div id="i18n.textPrivacyModal" class="w3-container w3-padding">
+                <div id="i18n_textPrivacyModal" class="w3-container w3-padding">
                     <h4>Data Protection Officer</h4>
                     <p><a href="mailto:jacopo_NOSPAMPLEASE@a-centauri.com">Jacopo Cassinis</a> - Sori (Italy)</p>
                     I do not collect any data and logs are anonymized. This website uses no cookies. Preferences are

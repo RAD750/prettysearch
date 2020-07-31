@@ -1,0 +1,15 @@
+{
+    "i18n_btnAbout": "A proposito",
+    "i18n_btnPreferences": "Preferenze",
+    "i18n_btnSavePrefs": "Salva preferenze",
+    "i18n_btnResetToDefault": "Ripristina predefiniti",
+    "i18n_titleAboutModal": "A proposito di PrettySearch",
+    "i18n_titlePreferencesModal": "Preferenze di ricerca",
+    "i18n_titlePrivacyModal": "Privacy",
+    "i18n_textAboutModal": "PrettySearch è un portale di ricerca.<br />Il suo scopo è quello di ricreare l'interfaccia carina di Bing, con le sue belle foto di sfondo, senza però legarti a Microsoft.<br />Puoi scegliere il tuo motore di ricerca e lo sfondo che preferisci nelle <a href=\"#/preferences\" onclick='closeMdl(\"mdl_about\");openMdl(\"mdl_preferences\")'>preferenze</a>",
+    "i18n_textAboutModalDevel": "Il sito è hostato e sviluppato da <a href=\"https://www.a-centauri.com\">Jacopo</a>. Puoi guardare il codice sorgente e contribuire allo sviluppo su <a href=\"https://github.com/RAD750/prettysearch\">GitHub</a>.",
+    "i18n_textAboutModalPrivacy": "Per favore, leggi la <a href=\"#/privacy\" onclick='closeMdl(\"mdl_about\");openMdl(\"mdl_privacy\")'>Privacy Policy</a>. Potresti rimanere sorpreso ☺",
+    "i18n_textPrivacyModal": "<h4>Responsabile trattamento dati</h4><p><a href=\"mailto:jacopo_NOSPAMPLEASE@a-centauri.com\">Jacopo Cassinis</a> - Sori (Italy)</p> Non raccolgo nessun dato e i log di sistema sono anonimizzati. Questo sito non utilizza nessun cookie e le preferenze sono salvate nello storage locale HTML5 (non vengono inviate al server).<br />Quando clicchi \"Cerca\", la tua query di ricerca viene inviata al motore di tua scelta, perciò dovresti leggere le loro privacy policy per saperne di più.",
+    "i18n_labelSearchEngineSelection": "Scegli il tuo motore di ricerca:",
+    "i18n_labelUseCustomBackdrop": "Usa sfondo personalizzato"
+}

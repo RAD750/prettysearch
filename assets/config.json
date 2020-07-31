@@ -3,36 +3,44 @@
         "google": {
             "friendlyName": "Google",
             "endpointURL": "https://google.com/search?q=",
+            "keyShortcut": "G",
             "index": 0
+            
         },
         "bing": {
             "friendlyName": "Bing",
             "endpointURL": "https://bing.com/?q=",
+            "keyShortcut": "B",
             "index": 1
         },
         "yahoo": {
             "friendlyName": "Yahoo",
             "endpointURL": "https://search.yahoo.com/search?q=",
+            "keyShortcut": "Y",
             "index": 2
         },
         "duckduckgo": {
             "friendlyName": "DuckDuckGo",
             "endpointURL": "https://duckduckgo.com/?q=",
+            "keyShortcut": "D",
             "index": 3
         },
         "qwant": {
-            "friendlyName": "Quant",
+            "friendlyName": "Qwant",
             "endpointURL": "https://qwant.com/?q=",
+            "keyShortcut": "Q",
             "index": 4
         },
         "qwantlite": {
             "friendlyName": "Qwant Lite",
             "endpointURL": "https://lite.qwant.com/?q=",
+            "keyShortcut": "L",
             "index": 5
         },
         "ecosia": {
             "friendlyName": "Ecosia",
             "endpointURL": "https://www.ecosia.org/search?q=",
+            "keyShortcut": "E",
             "index": 6
         }
     }
