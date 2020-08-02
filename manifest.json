@@ -3,8 +3,8 @@
     "short_name": "PrettySearch",
     "theme_color": "#f39c12",
     "background_color": "#97a7bd",
-    "display": "browser",
-    "Scope": "/",
+    "display": "standalone",
+    "scope": "/",
     "start_url": "/",
     "icons": [
       {

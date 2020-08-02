@@ -90,7 +90,7 @@ function getConfig() {
         document.getElementById("pref.search_engine").innerHTML = option_str;
         document.getElementById("pref.search_engine").selectedIndex = config_obj.search_engines[localStorage.getItem("search_engine")].index;
         var pref_search_engine = localStorage.getItem("search_engine");
-        document.getElementById("search-form").action = config_obj.search_engines[pref_search_engine].endpointURL;    
+        document.getElementById("search-form").action = config_obj.search_engines[pref_search_engine].endpointURL;
     }
 
 }
@@ -140,23 +140,29 @@ function checkForShortCuts() {
 }
 
 function applyi18n() {
-            /*i18n*/
-            var locale = window.navigator.language.substring(0, 2);
-            var req_obj_i18n = new XMLHttpRequest();
-            req_obj_i18n.onload = reqListeneri18n;
-            req_obj_i18n.open("get", `/assets/i18n/${locale}.json`, true);
-            req_obj_i18n.send();
-            function reqListeneri18n(e) {
-                var i18n_obj;
-                i18n_obj = JSON.parse(this.responseText);
-                var option_str = null;
-                Object.entries(i18n_obj).forEach(([key, value]) => {
-                    document.getElementById(key).innerHTML = value;
-                });
-            }
+    /*i18n*/
+    var locale = window.navigator.language.substring(0, 2);
+    if (locale !== "en") {
+        var req_obj_i18n = new XMLHttpRequest();
+        req_obj_i18n.onload = reqListeneri18n;
+        req_obj_i18n.open("get", `/assets/i18n/${locale}.json`, true);
+        req_obj_i18n.send();
+        function reqListeneri18n(e) {
+            var i18n_obj;
+            i18n_obj = JSON.parse(this.responseText);
+            var option_str = null;
+            Object.entries(i18n_obj).forEach(([key, value]) => {
+                document.getElementById(key).innerHTML = value;
+            });
+        }
+    }
 }
 
-function on_page_load() {
+window.onload = () => {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('sw.js');
+    }
     checkForShortCuts();
     loadPrefs();
     getConfig();
