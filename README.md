@@ -5,14 +5,19 @@ Made for a friend who was using Bing only because of the pretty backdrops ☺
 
 [Demo Site](http://prettysearch.a-centauri.com/)
 
-## Functionality
+## Features
 
 * Customizable search engine (via GUI) 
 * Customizable backdrop (via GUI) 
 * Simple JSON files to add new server-side backdrops and new search engines.
+* PWA aware
+* Key shortcuts to choose search engine without opening the settings (customizable via config.json)
+* Internationalization/localization suppor
+
 
 ## Future plans
 
-* Internationalization/localization
+* Choose one of the daily backdrops
+* Backdrop categories (like Nature, Mountains, Railways, Cities and so on)
 * Code refactoring
 * Backdrops via Unsplash random images.
