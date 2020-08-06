@@ -61,9 +61,21 @@ function savePrefs() {
     closeMdl("mdl_preferences");
     getConfig();
     getBackdrop();
-    //localStorage.setItem("search_engine", );
 }
 
+function setCurrentBackdropAsDefault() {
+    var backdrops;
+    var req_obj = new XMLHttpRequest();
+    req_obj.onload = reqListener;
+    req_obj.open("get", "/assets/backdrops.json", true);
+    req_obj.send();
+    function reqListener(e) {
+        backdrops = JSON.parse(this.responseText);
+        var today = new Date();
+        var c = today.getDate() - 1;
+        document.getElementById("pref.custom_backdrop").value = "/assets/media/backdrops/" + backdrops[c].filename;
+    }
+}
 
 function resetPrefs() {
     localStorage.removeItem("search_engine");
@@ -98,6 +110,8 @@ function getConfig() {
 //Get the backdrop with matching metadata from backdrops.json, based on the current day.
 function getBackdrop() {
     if (localStorage.getItem("custom_backdrop") == null || localStorage.getItem("custom_backdrop") == "") {
+        divmdl = document.getElementById("divAboutModalPhoto");
+        divmdl.style.display = 'block';
         var backdrops;
         var req_obj = new XMLHttpRequest();
         req_obj.onload = reqListener;
@@ -109,12 +123,14 @@ function getBackdrop() {
             var today = new Date();
             var c = today.getDate() - 1;
             var a = "body { background-image: url('/assets/media/backdrops/" + backdrops[c].filename + "'); background-repeat: no-repeat; background-size: cover!important; }";
-            var b = 'Backdrop photo by <a href="' + backdrops[c].attrURL + '">' + backdrops[c].authorName + "</a> on Unsplash.";
+            var b = '<a href="' + backdrops[c].attrURL + '">' + backdrops[c].authorName + "</a>";
             document.getElementById("js-backdrop").innerHTML = a;
-            //document.getElementById("js-unsplash-attrib").innerHTML = b
+            document.getElementById("photoAuthorName").innerHTML = b
 
         }
     } else {
+        divmdl = document.getElementById("divAboutModalPhoto");
+        divmdl.style.display = 'none';
         var a = "body { background-image: url('" + localStorage.getItem("custom_backdrop") + "'); background-repeat: no-repeat; background-size: cover!important; }";
         document.getElementById("js-backdrop").innerHTML = a;
     }
@@ -161,7 +177,7 @@ function applyi18n() {
 window.onload = () => {
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker
-            .register('sw.js');
+            .register('sw.js?v=0.4');
     }
     checkForShortCuts();
     loadPrefs();
