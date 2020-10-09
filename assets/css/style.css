@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-BlackItalic.woff2) format('woff2'), url(/assets/fonts/FiraSans-BlackItalic.woff) format('woff');
+    src: url(../fonts/FiraSans-BlackItalic.woff2) format('woff2'), url(../fonts/FiraSans-BlackItalic.woff) format('woff');
     font-weight: 900;
     font-style: italic;
     font-display: swap
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-ThinItalic.woff2) format('woff2'), url(/assets/fonts/FiraSans-ThinItalic.woff) format('woff');
+    src: url(../fonts/FiraSans-ThinItalic.woff2) format('woff2'), url(../fonts/FiraSans-ThinItalic.woff) format('woff');
     font-weight: 100;
     font-style: italic;
     font-display: swap
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-ExtraBold.woff2) format('woff2'), url(/assets/fonts/FiraSans-ExtraBold.woff) format('woff');
+    src: url(../fonts/FiraSans-ExtraBold.woff2) format('woff2'), url(../fonts/FiraSans-ExtraBold.woff) format('woff');
     font-weight: 800;
     font-style: normal;
     font-display: swap
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-SemiBoldItalic.woff2) format('woff2'), url(/assets/fonts/FiraSans-SemiBoldItalic.woff) format('woff');
+    src: url(../fonts/FiraSans-SemiBoldItalic.woff2) format('woff2'), url(../fonts/FiraSans-SemiBoldItalic.woff) format('woff');
     font-weight: 600;
     font-style: italic;
     font-display: swap
@@ -32,7 +32,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-Medium.woff2) format('woff2'), url(/assets/fonts/FiraSans-Medium.woff) format('woff');
+    src: url(../fonts/FiraSans-Medium.woff2) format('woff2'), url(../fonts/FiraSans-Medium.woff) format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap
@@ -40,7 +40,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-Regular.woff2) format('woff2'), url(/assets/fonts/FiraSans-Regular.woff) format('woff');
+    src: url(../fonts/FiraSans-Regular.woff2) format('woff2'), url(../fonts/FiraSans-Regular.woff) format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap
@@ -48,7 +48,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-BoldItalic.woff2) format('woff2'), url(/assets/fonts/FiraSans-BoldItalic.woff) format('woff');
+    src: url(../fonts/FiraSans-BoldItalic.woff2) format('woff2'), url(../fonts/FiraSans-BoldItalic.woff) format('woff');
     font-weight: 700;
     font-style: italic;
     font-display: swap
@@ -64,7 +64,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-Black.woff2) format('woff2'), url(/assets/fonts/FiraSans-Black.woff) format('woff');
+    src: url(../fonts/FiraSans-Black.woff2) format('woff2'), url(../fonts/FiraSans-Black.woff) format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap
@@ -72,7 +72,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-Italic.woff2) format('woff2'), url(/assets/fonts/FiraSans-Italic.woff) format('woff');
+    src: url(../fonts/FiraSans-Italic.woff2) format('woff2'), url(../fonts/FiraSans-Italic.woff) format('woff');
     font-weight: 400;
     font-style: italic;
     font-display: swap
@@ -80,7 +80,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-ExtraLight.woff2) format('woff2'), url(/assets/fonts/FiraSans-ExtraLight.woff) format('woff');
+    src: url(../fonts/FiraSans-ExtraLight.woff2) format('woff2'), url(../fonts/FiraSans-ExtraLight.woff) format('woff');
     font-weight: 200;
     font-style: normal;
     font-display: swap
@@ -88,7 +88,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-MediumItalic.woff2) format('woff2'), url(/assets/fonts/FiraSans-MediumItalic.woff) format('woff');
+    src: url(../fonts/FiraSans-MediumItalic.woff2) format('woff2'), url(../fonts/FiraSans-MediumItalic.woff) format('woff');
     font-weight: 500;
     font-style: italic;
     font-display: swap
@@ -96,7 +96,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-SemiBold.woff2) format('woff2'), url(/assets/fonts/FiraSans-SemiBold.woff) format('woff');
+    src: url(../fonts/FiraSans-SemiBold.woff2) format('woff2'), url(../fonts/FiraSans-SemiBold.woff) format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap
@@ -104,7 +104,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-LightItalic.woff2) format('woff2'), url(/assets/fonts/FiraSans-LightItalic.woff) format('woff');
+    src: url(../fonts/FiraSans-LightItalic.woff2) format('woff2'), url(../fonts/FiraSans-LightItalic.woff) format('woff');
     font-weight: 300;
     font-style: italic;
     font-display: swap
@@ -112,7 +112,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-Bold.woff2) format('woff2'), url(/assets/fonts/FiraSans-Bold.woff) format('woff');
+    src: url(../fonts/FiraSans-Bold.woff2) format('woff2'), url(../fonts/FiraSans-Bold.woff) format('woff');
     font-weight: 700;
     font-style: normal;
     font-display: swap
@@ -120,7 +120,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-ExtraLightItalic.woff2) format('woff2'), url(/assets/fonts/FiraSans-ExtraLightItalic.woff) format('woff');
+    src: url(../fonts/FiraSans-ExtraLightItalic.woff2) format('woff2'), url(../fonts/FiraSans-ExtraLightItalic.woff) format('woff');
     font-weight: 200;
     font-style: italic;
     font-display: swap
@@ -128,7 +128,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-Thin.woff2) format('woff2'), url(/assets/fonts/FiraSans-Thin.woff) format('woff');
+    src: url(../fonts/FiraSans-Thin.woff2) format('woff2'), url(../fonts/FiraSans-Thin.woff) format('woff');
     font-weight: 100;
     font-style: normal;
     font-display: swap
@@ -136,7 +136,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-Light.woff2) format('woff2'), url(/assets/fonts/FiraSans-Light.woff) format('woff');
+    src: url(../fonts/FiraSans-Light.woff2) format('woff2'), url(../fonts/FiraSans-Light.woff) format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap
@@ -144,7 +144,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: url(/assets/fonts/FiraSans-ExtraBoldItalic.woff2) format('woff2'), url(/assets/fonts/FiraSans-ExtraBoldItalic.woff) format('woff');
+    src: url(../fonts/FiraSans-ExtraBoldItalic.woff2) format('woff2'), url(../fonts/FiraSans-ExtraBoldItalic.woff) format('woff');
     font-weight: 800;
     font-style: italic;
     font-display: swap
@@ -161,8 +161,8 @@ html {
 
 @font-face {
     font-family: FontAwesome;
-    src: url(/assets/fonts/fontawesome-webfont.eot);
-    src: url(/assets/fonts/fontawesome-webfont.eot) format('embedded-opentype'), url(../fonts/fontawesome-webfont.woff2?v=4.7.0) format('woff2'), url(../fonts/fontawesome-webfont.woff) format('woff'), url(../fonts/fontawesome-webfont.ttf) format('truetype'), url(../fonts/fontawesome-webfont.svg) format('svg');
+    src: url(../fonts/fontawesome-webfont.eot);
+    src: url(../fonts/fontawesome-webfont.eot) format('embedded-opentype'), url(../fonts/fontawesome-webfont.woff2?v=4.7.0) format('woff2'), url(../fonts/fontawesome-webfont.woff) format('woff'), url(../fonts/fontawesome-webfont.ttf) format('truetype'), url(../fonts/fontawesome-webfont.svg) format('svg');
     font-weight: 400;
     font-style: normal
 }

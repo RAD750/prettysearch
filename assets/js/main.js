@@ -67,13 +67,13 @@ function setCurrentBackdropAsDefault() {
     var backdrops;
     var req_obj = new XMLHttpRequest();
     req_obj.onload = reqListener;
-    req_obj.open("get", "/assets/backdrops.json", true);
+    req_obj.open("get", "./assets/backdrops.json", true);
     req_obj.send();
     function reqListener(e) {
         backdrops = JSON.parse(this.responseText);
         var today = new Date();
         var c = today.getDate() - 1;
-        document.getElementById("pref.custom_backdrop").value = "/assets/media/backdrops/" + backdrops[c].filename;
+        document.getElementById("pref.custom_backdrop").value = "./assets/media/backdrops/" + backdrops[c].filename;
     }
 }
 
@@ -89,7 +89,7 @@ function resetPrefs() {
 function getConfig() {
     var req_obj = new XMLHttpRequest();
     req_obj.onload = reqListener;
-    req_obj.open("get", "/assets/config.json", true);
+    req_obj.open("get", "./assets/config.json", true);
     req_obj.send();
 
     function reqListener(e) {
@@ -115,14 +115,14 @@ function getBackdrop() {
         var backdrops;
         var req_obj = new XMLHttpRequest();
         req_obj.onload = reqListener;
-        req_obj.open("get", "/assets/backdrops.json", true);
+        req_obj.open("get", "./assets/backdrops.json", true);
         req_obj.send();
 
         function reqListener(e) {
             backdrops = JSON.parse(this.responseText);
             var today = new Date();
             var c = today.getDate() - 1;
-            var a = "body { background-image: url('/assets/media/backdrops/" + backdrops[c].filename + "'); background-repeat: no-repeat; background-size: cover!important; }";
+            var a = "body { background-image: url('./assets/media/backdrops/" + backdrops[c].filename + "'); background-repeat: no-repeat; background-size: cover!important; }";
             var b = '<a href="' + backdrops[c].attrURL + '">' + backdrops[c].authorName + "</a>";
             document.getElementById("js-backdrop").innerHTML = a;
             document.getElementById("photoAuthorName").innerHTML = b
@@ -161,7 +161,7 @@ function applyi18n() {
     if (locale !== "en") {
         var req_obj_i18n = new XMLHttpRequest();
         req_obj_i18n.onload = reqListeneri18n;
-        req_obj_i18n.open("get", `/assets/i18n/${locale}.json`, true);
+        req_obj_i18n.open("get", `./assets/i18n/${locale}.json`, true);
         req_obj_i18n.send();
         function reqListeneri18n(e) {
             var i18n_obj;

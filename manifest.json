@@ -8,12 +8,12 @@
     "start_url": "/",
     "icons": [
       {
-        "src": "/assets/media/icons/PrettySearch.png",
+        "src": "./assets/media/icons/PrettySearch.png",
         "sizes": "512x512",
         "type": "image/png"
       },
       {
-        "src": "/assets/media/icons/PrettySearch.256.png",
+        "src": "./assets/media/icons/PrettySearch.256.png",
         "sizes": "256x256",
         "type": "image/png"
       }

@@ -1,20 +1,20 @@
 var currentVersion = "0.4";
 var cacheName = 'pwa-prettysearch';
 var filesToCache = [
-  '/',
-  '/index.html',
-  '/assets/css/style.css',
-  '/assets/js/main.js',
-  '/assets/backdrops.json',
-  '/assets/config.json',
-  '/assets/media/icons/PrettySearch.png',
-  '/assets/media/icons/PrettySearch.256.png'
+  './',
+  './index.html',
+  './assets/css/style.css',
+  './assets/js/main.js',
+  './assets/backdrops.json',
+  './assets/config.json',
+  './assets/media/icons/PrettySearch.png',
+  './assets/media/icons/PrettySearch.256.png'
 ];
 
 self.addEventListener('install', (e) => {
   console.log('[Service Worker] Install');
   //fetch backdrop json
-  fetch('/assets/config.json')
+  fetch('./assets/config.json')
     .then((response) => {
       return response.json()
     })
@@ -28,7 +28,7 @@ self.addEventListener('install', (e) => {
     console.log("Error fetching resource: " + err)
   })
 
-fetch('/assets/backdrops.json')
+fetch('./assets/backdrops.json')
   .then((response) => {
     return response.json()
   })
@@ -36,7 +36,7 @@ fetch('/assets/backdrops.json')
     var today = new Date();
     var dow = today.getDate() - 1;
     console.log("Current backdrop: " + data[dow].filename)
-    filesToCache.push(`/assets/media/backdrops/${data[dow].filename}`)
+    filesToCache.push(`./assets/media/backdrops/${data[dow].filename}`)
     caches.open(cacheName).then((cache) => {
       console.log('[Service Worker] Caching all: app shell and content');
       return cache.addAll(filesToCache);

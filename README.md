@@ -12,12 +12,12 @@ Made for a friend who was using Bing only because of the pretty backdrops ☺
 * Simple JSON files to add new server-side backdrops and new search engines.
 * PWA aware
 * Key shortcuts to choose search engine without opening the settings (customizable via config.json)
-* Internationalization/localization suppor
+* Internationalization/localization support
+* Set one of the daily backdrops permanently
 
 
 ## Future plans
 
-* Choose one of the daily backdrops
 * Backdrop categories (like Nature, Mountains, Railways, Cities and so on)
 * Code refactoring
 * Backdrops via Unsplash random images.
